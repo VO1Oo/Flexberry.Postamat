@@ -1,0 +1,141 @@
+﻿{
+  "name": "IISPostamatПостамат",
+  "modelName": "i-i-s-postamat-постамат",
+  "className": "Постамат",
+  "nameSpace": "IIS.Postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерПост",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статПост",
+      "type": "i-i-s-postamat-стат-пост",
+      "flexberryType": "СтатПост",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "адрес",
+      "relatedTo": "i-i-s-postamat-адрес",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "ячейка",
+      "relatedTo": "i-i-s-postamat-ячейка",
+      "inverse": "постамат"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПостаматE",
+      "modelName": "i-i-s-postamat-постамат",
+      "attrs": [
+        {
+          "name": "номерПост",
+          "caption": "Номер постамата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "статПост",
+          "caption": "Статус постамата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Адрес",
+          "lookupValueField": "адрес",
+          "relationName": "Адрес",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Адрес",
+          "name": "адрес",
+          "relatedTo": "i-i-s-postamat-адрес",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ЯчейкаE",
+          "caption": "Ячейка",
+          "name": "ячейка",
+          "relatedTo": "i-i-s-postamat-ячейка",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПостаматL",
+      "modelName": "i-i-s-postamat-постамат",
+      "attrs": [
+        {
+          "name": "номерПост",
+          "caption": "Номер постамата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "статПост",
+          "caption": "Статус постамата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Адрес",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Адрес",
+          "name": "адрес",
+          "relatedTo": "i-i-s-postamat-адрес",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

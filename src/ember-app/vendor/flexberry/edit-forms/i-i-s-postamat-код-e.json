@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Получатель",
+      "projection": "ПолучательL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Код",
+  "name": "IISPostamatКодE",
+  "className": "КодE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-код",
+      "modelProjection": "КодE"
+    }
+  ]
+}

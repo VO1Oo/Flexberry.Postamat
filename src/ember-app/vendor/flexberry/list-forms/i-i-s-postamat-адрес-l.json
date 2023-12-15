@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-postamat-адрес-e",
+  "editForm": "i-i-s-postamat-адрес-e",
+  "external": false,
+  "caption": "Адрес",
+  "name": "IISPostamatАдресL",
+  "className": "АдресL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-адрес",
+      "modelProjection": "АдресL"
+    }
+  ]
+}

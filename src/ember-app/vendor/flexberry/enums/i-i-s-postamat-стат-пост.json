@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Postamat",
+  "className": "СтатПост",
+  "enumObjects": {
+    "1": "Работает",
+    "2": "Не работает"
+  }
+}

@@ -1,0 +1,20 @@
+import Mixin from '@ember/object/mixin';
+import $ from 'jquery';
+
+export let Serializer = Mixin.create({
+  getAttrs: function () {
+    let parentAttrs = this._super();
+    let attrs = {
+      код: { serialize: 'odata-id', deserialize: 'records' },
+      логистика: { serialize: 'odata-id', deserialize: 'records' },
+      транзакция: { serialize: 'odata-id', deserialize: 'records' },
+      хранение: { serialize: 'odata-id', deserialize: 'records' }
+    };
+
+    return $.extend(true, {}, parentAttrs, attrs);
+  },
+  init: function () {
+    this.set('attrs', this.getAttrs());
+    this._super(...arguments);
+  }
+});

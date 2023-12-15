@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Postamat",
+  "className": "СтатЯчейк",
+  "enumObjects": {
+    "2": "Занята",
+    "1": "Свободна"
+  }
+}

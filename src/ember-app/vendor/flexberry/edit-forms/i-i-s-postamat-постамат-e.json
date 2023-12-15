@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Адрес",
+      "projection": "АдресL",
+      "detailModelName": null
+    },
+    {
+      "master": "хранение",
+      "displayAttributeName": "номер",
+      "required": true,
+      "relationName": "Ячейка.Хранение",
+      "projection": "ХранениеL",
+      "detailModelName": "i-i-s-postamat-ячейка"
+    }
+  ],
+  "external": false,
+  "caption": "Постамат",
+  "name": "IISPostamatПостаматE",
+  "className": "ПостаматE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-постамат",
+      "modelProjection": "ПостаматE"
+    }
+  ]
+}

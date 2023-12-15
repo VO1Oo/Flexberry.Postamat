@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Служба доставки",
+  "name": "IISPostamatСлужбаДоставкиE",
+  "className": "СлужбаДоставкиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-служба-доставки",
+      "modelProjection": "СлужбаДоставкиE"
+    }
+  ]
+}

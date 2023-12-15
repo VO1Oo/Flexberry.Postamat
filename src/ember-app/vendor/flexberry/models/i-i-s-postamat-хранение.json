@@ -1,0 +1,117 @@
+﻿{
+  "name": "IISPostamatХранение",
+  "modelName": "i-i-s-postamat-хранение",
+  "className": "Хранение",
+  "nameSpace": "IIS.Postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗавершения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаНачала",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "посылка",
+      "relatedTo": "i-i-s-postamat-посылка",
+      "inverse": "хранение"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаписьПолучE",
+      "modelName": "i-i-s-postamat-хранение",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ХранениеE",
+      "modelName": "i-i-s-postamat-хранение",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаЗавершения",
+          "caption": "Дата завершения",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ПосылкаE",
+          "caption": "Посылка",
+          "name": "посылка",
+          "relatedTo": "i-i-s-postamat-посылка",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ХранениеL",
+      "modelName": "i-i-s-postamat-хранение",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаЗавершения",
+          "caption": "Дата завершения",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

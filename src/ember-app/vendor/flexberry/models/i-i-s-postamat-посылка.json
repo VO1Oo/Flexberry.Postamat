@@ -1,0 +1,181 @@
+﻿{
+  "name": "IISPostamatПосылка",
+  "modelName": "i-i-s-postamat-посылка",
+  "className": "Посылка",
+  "nameSpace": "IIS.Postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерПост",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерЯчейки",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номПосылки",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "код",
+      "relatedTo": "i-i-s-postamat-код",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "логистика",
+      "relatedTo": "i-i-s-postamat-логистика",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "транзакция",
+      "relatedTo": "i-i-s-postamat-транзакция",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "хранение",
+      "relatedTo": "i-i-s-postamat-хранение",
+      "inverse": "посылка"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПосылкаE",
+      "modelName": "i-i-s-postamat-посылка",
+      "attrs": [
+        {
+          "name": "номПосылки",
+          "caption": "Номер посылки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерПост",
+          "caption": "Номер постамата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номерЯчейки",
+          "caption": "Номер ячейки",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Время",
+          "lookupValueField": "время",
+          "relationName": "Транзакция",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата оплаты",
+              "hidden": false,
+              "index": 5
+            },
+            {
+              "name": "время",
+              "caption": "Время оплаты",
+              "hidden": true,
+              "index": 6
+            },
+            {
+              "name": "оплата",
+              "caption": "Статус оплаты",
+              "hidden": false,
+              "index": 7
+            },
+            {
+              "name": "сумма",
+              "caption": "Сумма",
+              "hidden": false,
+              "index": 8
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Транзакция",
+          "name": "транзакция",
+          "relatedTo": "i-i-s-postamat-транзакция",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Логистика",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "информация",
+              "caption": "Информация",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 9,
+          "type": "default",
+          "caption": "Информация",
+          "name": "логистика",
+          "relatedTo": "i-i-s-postamat-логистика",
+          "inverse": null
+        },
+        {
+          "lookupValue": "СгенКод",
+          "lookupValueField": "сгенКод",
+          "relationName": "Код",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "сгенКод",
+              "caption": "Сгенерировать код",
+              "hidden": true,
+              "index": 11
+            }
+          ],
+          "index": 10,
+          "type": "standard",
+          "caption": "Код",
+          "name": "код",
+          "relatedTo": "i-i-s-postamat-код",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

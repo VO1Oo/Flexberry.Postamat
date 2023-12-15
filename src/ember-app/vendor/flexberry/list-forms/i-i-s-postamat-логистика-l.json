@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-postamat-логистика-e",
+  "editForm": "i-i-s-postamat-логистика-e",
+  "external": false,
+  "caption": "Логистика",
+  "name": "IISPostamatЛогистикаL",
+  "className": "ЛогистикаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-логистика",
+      "modelProjection": "ЛогистикаL"
+    }
+  ]
+}

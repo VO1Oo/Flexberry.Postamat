@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "СлужбаДоставки",
+      "projection": "СлужбаДоставкиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Логистика",
+  "name": "IISPostamatЛогистикаE",
+  "className": "ЛогистикаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-postamat-логистика",
+      "modelProjection": "ЛогистикаE"
+    }
+  ]
+}

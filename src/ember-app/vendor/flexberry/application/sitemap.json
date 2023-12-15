@@ -1,0 +1,71 @@
+﻿{
+  "applicationCaption": "Postamat",
+  "applicationTitle": "Postamat",
+  "items": [
+    {
+      "link": null,
+      "menuName": "postamat",
+      "caption": "Postamat",
+      "title": "Postamat",
+      "children": [
+        {
+          "link": "i-i-s-postamat-служба-доставки-l",
+          "menuName": null,
+          "caption": "Служба доставки",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-получатель-l",
+          "menuName": null,
+          "caption": "Получатель",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-постамат-l",
+          "menuName": null,
+          "caption": "Постамат",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-хранение-l",
+          "menuName": null,
+          "caption": "Хранение",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-логистика-l",
+          "menuName": null,
+          "caption": "Логистика",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-код-l",
+          "menuName": null,
+          "caption": "Код",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-транзакция-l",
+          "menuName": null,
+          "caption": "Транзакция",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-postamat-адрес-l",
+          "menuName": null,
+          "caption": "Адрес",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
